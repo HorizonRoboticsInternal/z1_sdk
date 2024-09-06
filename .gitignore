@@ -1,2 +1,4 @@
 .vscode
 build
+.idea
+unitree_arm_interface*.so
