@@ -77,6 +77,8 @@ void jointProtect(Eigen::Ref<Vec6> q, Eigen::Ref<Vec6> qd);
 std::vector<double> getJointQMax() {return _jointQMax;}
 std::vector<double> getJointQMin() {return _jointQMin;}
 std::vector<double> getJointSpeedMax() {return _jointSpeedMax;}
+Mat6 getSlist() {return _Slist;}
+HomoMat getM() {return _M;}
 
 
 /*

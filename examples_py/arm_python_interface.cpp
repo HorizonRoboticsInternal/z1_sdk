@@ -73,6 +73,8 @@ PYBIND11_MODULE(unitree_arm_interface, m){
         .def("getJointQMax", &Z1Model::getJointQMax, rvp::reference_internal)
         .def("getJointQMin", &Z1Model::getJointQMin, rvp::reference_internal)
         .def("getJointSpeedMax", &Z1Model::getJointSpeedMax, rvp::reference_internal)
+        .def("getSlist", &Z1Model::getSlist, rvp::reference_internal)
+        .def("getM", &Z1Model::getM, rvp::reference_internal)
         .def("inverseKinematics", [](Z1Model& self, HomoMat Tdes, Vec6 qPast, bool checkInWorkSpace){
             Vec6 q_result;
             bool hasIK = self.inverseKinematics(Tdes, qPast, q_result, checkInWorkSpace);
